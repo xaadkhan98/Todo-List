@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #ceb563, #eb896e);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  background: white;
+  border: none;
+}
+
+form button {
+  color: #eb896e;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+form button:hover {
+  color: white;
+  background: #eb896e;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.Divstyle {
+  background-color: white;
+  color: black;
+  display: flex;
+  margin: 0.5rem 0rem;
+  min-width: 30%;
+  transition: 0.5s ease;
+}
+
+.todo {
+  flex: 1;
+  padding: 1rem;
+}
+
+.checkStyle {
+  border: none;
+  color: white;
+  background-color: rgb(31, 143, 31);
+  padding: 1rem 1rem;
+}
+
+.trashStyle {
+  border: none;
+  color: white;
+  background-color: #bb583c;
+  padding: 1rem 1rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: 0.5s ease;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  margin-left: 1rem;
+  color: #bb583c;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.select {
+  position: relative;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #bb583c;
+  padding: 0.69rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: #bb583c;
+}
