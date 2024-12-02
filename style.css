@@ -5,84 +5,90 @@
 }
 
 body {
-  background: linear-gradient(120deg, #ceb563, #eb896e);
-  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(120deg, #e2c35d, #d88771);
   color: white;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
-
+header {
+  font-size: 1.5rem;
+}
 header,
 form {
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
 }
 
 form input,
 form button {
   padding: 0.5rem;
   font-size: 2rem;
-  background: white;
   border: none;
+  background: white;
 }
 
 form button {
-  color: #eb896e;
-  background-color: white;
+  background: white;
+  color: #d88771;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 form button:hover {
+  background: #d88771;
   color: white;
-  background: #eb896e;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-width: 40%;
   list-style: none;
 }
 
-.Divstyle {
+.todo {
+  margin: 0.5rem;
   background-color: white;
   color: black;
+  font-size: 1.5rem;
   display: flex;
-  margin: 0.5rem 0rem;
-  min-width: 30%;
-  transition: 0.5s ease;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
 }
 
-.todo {
+.todo li {
   flex: 1;
+  padding: 0rem 0.5rem;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff6f47;
+  color: white;
+  cursor: pointer;
+  border: none;
   padding: 1rem;
+  font-size: 1rem;
 }
 
-.checkStyle {
-  border: none;
-  color: white;
-  background-color: rgb(31, 143, 31);
-  padding: 1rem 1rem;
+.complete-btn {
+  background-color: rgb(39, 155, 39);
 }
-
-.trashStyle {
-  border: none;
-  color: white;
-  background-color: #bb583c;
-  padding: 1rem 1rem;
-}
-
 .fa-trash,
 .fa-check {
   pointer-events: none;
 }
 
-.checked {
+.completed {
   text-decoration: line-through;
   opacity: 0.5;
-  transition: 0.5s ease;
 }
 
 .fall {
@@ -93,30 +99,36 @@ form button:hover {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  border: none;
   appearance: none;
   outline: none;
-  border: none;
-  margin-left: 1rem;
-  color: #bb583c;
-  padding: 1rem;
-  width: 10rem;
 }
 
 .select {
+  margin: 1rem;
   position: relative;
+  overflow: hidden;
 }
+
+select {
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
 .select::after {
   content: "\25BC";
   position: absolute;
+  background-color: #ff6f47;
   top: 0;
   right: 0;
-  background: #bb583c;
-  padding: 0.69rem;
+  padding: 1rem;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 .select:hover::after {
-  background: white;
-  color: #bb583c;
+  background-color: white;
+  color: #ff6f47;
 }
